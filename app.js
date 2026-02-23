@@ -88,7 +88,7 @@ function drawRadarChart(userVec, bestVec, bestName) {
         r: {
           min: -1,
           max: 1,
-          ticks: { stepSize: 1 }
+          ticks: { stepSize: false }
         }
       }
     }
@@ -148,4 +148,5 @@ document.getElementById("run").addEventListener("click", async () => {
 });
 
 renderQuestions();
+
 
