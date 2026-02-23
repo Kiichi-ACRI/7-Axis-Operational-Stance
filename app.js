@@ -1,11 +1,11 @@
 const AXES = [
-  { id: "individual", jp: "個/群れ" },
-  { id: "rule_of_law", jp: "法治/暴力" },
-  { id: "centralization", jp: "中央/地方" },
-  { id: "enforcement", jp: "執行" },
-  { id: "irreversibility", jp: "不可逆性" },
-  { id: "real_axis", jp: "実軸/虚軸" },
-  { id: "legitimacy", jp: "正統性" }
+  { id: "individual", jp: "個人重視 / 集団重視" },
+  { id: "rule_of_law", jp: "法治 / 暴力支配" },
+  { id: "centralization", jp: "中央集権 / 地方分権" },
+  { id: "enforcement", jp: "政府の強さ（小さな政府 / 大きな政府）" },
+  { id: "irreversibility", jp: "歴史観（循環 / 進歩）" },
+  { id: "real_axis", jp: "現実重視 / 物語重視" },
+  { id: "legitimacy", jp: "権威観（批判 / 正統）" }
 ];
 
 function abcToValue(x) {
@@ -148,3 +148,4 @@ document.getElementById("run").addEventListener("click", async () => {
 });
 
 renderQuestions();
+
