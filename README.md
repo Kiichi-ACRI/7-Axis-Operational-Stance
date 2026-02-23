@@ -51,6 +51,8 @@ Each figure is mapped to the 7 axes with values from -1 to +1.
 
 ---
 
+See `examples/yamamoto_result.md` for a sample representation.
+
 ## License
 
 MIT License
