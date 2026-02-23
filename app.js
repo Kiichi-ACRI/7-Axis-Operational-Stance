@@ -88,7 +88,9 @@ function drawRadarChart(userVec, bestVec, bestName) {
         r: {
           min: -1,
           max: 1,
-          ticks: { stepSize: false }
+          ticks: {
+            display: false   // ← ★数字を完全に消す正しい設定
+          }
         }
       }
     }
@@ -148,5 +150,6 @@ document.getElementById("run").addEventListener("click", async () => {
 });
 
 renderQuestions();
+
 
 
