@@ -34,14 +34,14 @@ function renderQuestions() {
 
 async function loadFigures(lang) {
   const file = lang === "jp"
-    ? "../data/historical_figures_jp.json"
-    : "../data/historical_figures.json";
+    ? "data/historical_figures_jp.json"
+    : "data/historical_figures.json";  // 英語版が必要なら後で追加
   const res = await fetch(file);
   return await res.json();
 }
 
 async function loadComments() {
-  const res = await fetch("../data/historical_figures_comments_jp.json");
+  const res = await fetch("data/historical_figures_comments_jp.json");
   return await res.json();
 }
 
@@ -133,7 +133,6 @@ document.getElementById("run").addEventListener("click", async () => {
     lines.push(`- ${axis.jp}: ${userVec[i]}`);
   });
 
-  // コメント表示
   if (info) {
     lines.push("");
     lines.push("■ 一般的な分類");
@@ -145,7 +144,6 @@ document.getElementById("run").addEventListener("click", async () => {
 
   document.getElementById("result").textContent = lines.join("\n");
 
-  // レーダーチャート描画（あなた vs 最も近い思想家）
   drawRadarChart(userVec, best.vec, best.name);
 });
 
